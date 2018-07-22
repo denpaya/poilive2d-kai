@@ -1,0 +1,36 @@
+{
+	"version":"Sample 1.0.0",
+	"model":"43.moc",
+	"textures":[
+		"textures/0.png"
+	],
+	"layout":{ 
+    	 "center_x": 0,
+		 "center_y": -0.8,
+		 "width": 2.2
+	},
+	"motions":{
+		"idle":[    
+         {"file":"motions/loop.mtn"}
+      ], 
+      "sleepy":[    
+         {"file":"motions/secret.mtn"} 
+      ], 
+      "voice_2":[     
+         {"file":"motions/battle.mtn"}     
+      ],                                                     
+      "voice_3":[ 
+         {"file":"motions/port.mtn"} 
+      ], 
+      "voice_4":[ 
+         {"file":"motions/port.mtn"}, 
+         {"file":"motions/battle.mtn"} 
+      ], 
+      "voice_28":[ 
+         {"file":"motions/secret.mtn"} 
+      ],
+      "voice_1":[ 
+         {"file":"motions/secret.mtn"} 
+      ]
+	}
+}

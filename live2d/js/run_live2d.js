@@ -1,0 +1,1 @@
+loadlive2d('live2d', live2d_Path+'model.json');
