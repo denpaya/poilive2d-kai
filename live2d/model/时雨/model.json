@@ -9,28 +9,31 @@
 		 "center_y": -0.8,
 		 "width": 2.2
 	},
+	"hit_areas_custom":{
+        "head_x":[-0.25, 0.3],
+        "head_y":[0.65, 0.1],
+        "body_x":[-0.3, 0.4],
+        "body_y":[0.15, -0.9]
+	},
 	"motions":{
 		"idle":[    
-         {"file":"motions/loop.mtn"}
-      ], 
-      "sleepy":[    
-         {"file":"motions/secret.mtn"} 
-      ], 
-      "voice_2":[     
-         {"file":"motions/battle.mtn"}     
-      ],                                                     
-      "voice_3":[ 
-         {"file":"motions/port.mtn"} 
-      ], 
-      "voice_4":[ 
-         {"file":"motions/port.mtn"}, 
-         {"file":"motions/battle.mtn"} 
-      ], 
-      "voice_28":[ 
-         {"file":"motions/secret.mtn"} 
-      ],
-      "voice_1":[ 
-         {"file":"motions/secret.mtn"} 
-      ]
+			{"file":"motions/loop.mtn"}
+		], 
+		"sleepy":[    
+			{"file":"motions/secret.mtn"} 
+		], 
+		"flick_head":[     
+			{"file":"motions/battle.mtn"}     
+		],                                                     
+		"tap_body":[ 
+			{"file":"motions/port.mtn"}, 
+			{"file":"motions/battle.mtn"} 
+		], 
+		"":[ 
+			{"file":"motions/port.mtn"},
+			{"file":"motions/battle.mtn"},
+			{"file":"motions/loop.mtn"},
+			{"file":"motions/secret.mtn"}
+		]
 	}
 }
