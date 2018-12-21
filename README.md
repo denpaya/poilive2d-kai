@@ -18,7 +18,7 @@ You can directly upload the zip file WordPress Dashboard to install my plugin.
 ## 更新日志 / Changelog
 * v0.9.9  
 1. 将插件使用的live2d模型修改为夕立与时雨，可以点击编成按钮来切换这两位看板娘。  
-The default models are replaces with Yuudachi and Shigure.You can switch the models via the change-button.
+The default models are replaced with Yuudachi and Shigure.You can switch the models via the change-button.
 
 2. 添加了右键菜单功能。  
 Added a right button menu function.
@@ -28,6 +28,10 @@ Added a catalog function.You can show the catalog of the current archive via the
 
 4. 其他杂七杂八的魔改。  
 etc.
+
+* v0.9.A
+1. 新增了本地一言的功能。你可以在插件控制面板上开关这个功能或对其进行设置。
+Added a new function of local Hitokoto.You can enable/disable this function via the plugin control panel.
 
 ## 写在最后 / P.S.
 由于本人是个编程初心者，插件难免会有一些bug，我会在之后想办法修复的。如有不足还请包涵。  
