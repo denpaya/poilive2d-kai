@@ -29,7 +29,9 @@ if ($_POST['update_pluginoptions'] == 'true') {
     </div>
     <h3>高级设置</h3>
     <div style="margin-left: 50px">
-    自定义提示<p> <textarea name="custom-msg" id="custom-msg"><?php echo get_option('live2d_custommsg'); ?></textarea>
+	<input type="checkbox" name="localkoto" id="localkoto" <?php echo get_option('live2d_localkoto'); ?> /> 设置本地一言（需开启一言显示）<p>
+	<p>自定义本地一言</p> <textarea name="custom-koto" id="custom-koto"><?php echo get_option('live2d_customkoto'); ?></textarea>
+    <p>自定义提示</p> <textarea name="custom-msg" id="custom-msg"><?php echo get_option('live2d_custommsg'); ?></textarea>
     <p>请自行校验json有效性，不需要的话请填写{}</p>
     </div>
     <input type="submit" class="button-primary" value="保存设置" style="margin: 20px 0;" /> 
@@ -63,6 +65,14 @@ function live2d_options_update()
         $display = '';
     }
     update_option('live2d_nocatalog', $display);
+	
+    if ($_POST['localkoto'] == 'on') {
+        $display = 'checked';
+    } else {
+        $display = '';
+    }
+    update_option('live2d_localkoto', $display);
+	update_option('live2d_customkoto', stripslashes($_POST['custom-koto']));
     update_option('live2d_custommsg', stripslashes($_POST['custom-msg']));
 }
 ?>

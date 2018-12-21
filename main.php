@@ -31,7 +31,12 @@
 			} else {
 				$nocatalog = "var nocatalog = false;";
 			}
-			echo '<script type="text/javascript">var live2d_Path = "' . LIVE2D_URL . '/live2d/model/夕立/";var message_Path = "' . LIVE2D_URL . '/live2d/";var home_Path = "' . home_url() . '/";'.$nohitokoto.$nospecialtip.$nocatalog.'</script>';
+            if (get_option('live2d_localkoto') == "checked") {
+                $localkoto = "var localkoto = true;";
+            } else {
+                $localkoto = "var localkoto = false;";
+            }
+			echo '<script type="text/javascript">var live2d_Path = "' . LIVE2D_URL . '/live2d/model/夕立/";var message_Path = "' . LIVE2D_URL . '/live2d/";var home_Path = "' . home_url() . '/";'.$nohitokoto.$nospecialtip.$nocatalog.$localkoto.'</script>';
             if (!get_option('live2d_maincolor')) {
                 $maincolor = "206,0,255";
             } else {

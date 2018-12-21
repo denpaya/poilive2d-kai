@@ -3,14 +3,14 @@
 Plugin Name: PoiLive2D改
 Plugin URI: https://omega.im/63/
 Description: 添加一个Live2D人物在你的博客里。基于戴兜的PoiLive2d插件修改而来。<a href="https://daidr.me/archives/code-176.html" target="_blank">原版插件下载地址</a>
-Version: 0.9.9
+Version: 0.9.A
 Author: Omega
 Author URI: https://omega.im
 License: GPLv2
 */
 
 defined('ABSPATH') or exit;
-define('LIVE2D_VERSION', '0.9.9');
+define('LIVE2D_VERSION', '0.9.A');
 define('LIVE2D_URL', plugins_url('', __FILE__));
 define('LIVE2D_PATH', dirname(__FILE__));
 
@@ -70,6 +70,10 @@ if (!get_option('live2d_nocatalog')) {
 if (!get_option('live2d_custommsg')) {
     $json = "{\"mouseover\":[{\"selector\":\".entry-content a\",\"text\":[\"要看看 <span style='color:#0099cc;'>「{text}」</span> 么？\"]},{\"selector\":\".post .post-title\",\"text\":[\"主人写的<s>爽文</s> <span style='color:#0099cc;'>「{text}」</span> ，要看看嘛？\"]},{\"selector\":\".feature-content a\",\"text\":[\"超级热门的 <span style='color:#0099cc;'>「{text}」</span> ，要看看么？\"]},{\"selector\":\".searchbox\",\"text\":[\"在找什么东西呢，需要帮忙吗？\"]},{\"selector\":\".top-social\",\"text\":[\"这里是主人的社交账号啦！不关注一波嘛？\"]},{\"selector\":\".zilla-likes\",\"text\":[\"听说点这个主人会很开心哦~\"]},{\"selector\":\".cd-top\",\"text\":[\"你想要返回顶部嘛？\"]},{\"selector\":\".site-title\",\"text\":[\"你要返回首页是吗？\"]},{\"selector\":\".comments\",\"text\":[\"看了这么久，是时候评论一下啦！\"]},{\"selector\":\".post-nepre.previous\",\"text\":[\"看看主人的上一篇文章怎么样？\"]},{\"selector\":\".post-nepre.next\",\"text\":[\"看看主人的下一篇文章怎么样？\"]},{\"selector\":\".reward-open\",\"text\":[\"你看主人把我扔在这么慢的服务器上，打赏了解一下？\"]},{\"selector\":\".poiplay.playing\",\"text\":[\"这是播放按钮啦~\"]},{\"selector\":\".poi-open-list\",\"text\":[\"戳一下就可以看到歌词哦！\"]},{\"selector\":\"#open-poi-player\",\"text\":[\"听说点这个按钮可以显示/隐藏播放器？\"]},{\"selector\":\".hide-button\",\"text\":[\"我有话唠属性，觉得我烦可以关掉我哦~\"]},{\"selector\":\"#pagination\",\"text\":[\"想看看更久远的内容？\"]}],\"click\":[{\"selector\":\"#landlord #live2d\",\"text\":[\"不要动手动脚的！快把手拿开~~\",\"真…真的是不知羞耻！\",\"Hentai！\",\"再摸的话我可要报警了！⌇●﹏●⌇\",\"110吗，这里有个变态一直在摸我(ó﹏ò｡)\"]}]}";
     update_option('live2d_custommsg', $json);
+}
+if (!get_option('live2d_localkoto')) {
+    $customkoto = "{\n\t\"localkoto\": [\n\t\t\"絶対、大丈夫！\",\n\t\t\"奇迹的驱逐舰？唔唔，才不是奇迹！\",\n\t\t\"感受到幸运女神之吻了！！\",\n\t\t\"是！我会加油的！\"\n\t]\n}";
+    update_option('live2d_customkoto', $customkoto);
 }
 
 require LIVE2D_PATH . '/main.php';

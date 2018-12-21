@@ -129,7 +129,7 @@ if(nohitokoto == false){
 	function ifActed() {
 		if (!hitokotoInterval) {
 			hitokotoInterval = true;
-			hitokotoTimer = window.setInterval(showHitokoto, 10000);
+			hitokotoTimer = window.setInterval(showHitokoto(localkoto), 20000);
 		}
 	}
 
@@ -139,10 +139,17 @@ if(nohitokoto == false){
 	}
 }
 
-function showHitokoto(){
-    $.getJSON('https://v1.hitokoto.cn/',function(result){
-        showMessage(result.hitokoto, 5000);
-    });
+function showHitokoto(lk){
+	if(lk) {
+		$.getJSON(message_Path+'localkoto.json.php',function(result){
+			showMessage(result.localkoto, 5000);
+		});
+	}
+	else {
+		$.getJSON('https://v1.hitokoto.cn/',function(result){
+			showMessage(result.hitokoto, 5000);
+		});
+	}
 }
 
 function showMessage(text, timeout){
