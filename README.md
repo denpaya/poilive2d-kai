@@ -30,7 +30,7 @@ Added a catalog function.You can show the catalog of the current archive via the
 etc.
 
 * v0.9.A
-1. 新增了本地一言的功能。你可以在插件控制面板上开关这个功能或对其进行设置。
+1. 新增了本地一言的功能。你可以在插件控制面板上开关这个功能或对其进行设置。  
 Added a new function of local Hitokoto.You can enable/disable this function via the plugin control panel.
 
 ## 写在最后 / P.S.
